@@ -139,19 +139,19 @@
                <div class="layer-tiles">
                   <h2>Layer</h2>
                   <label class="radio-container">
-                     <input type="checkbox" id="noise" name="mode" onclick="toggle('noise')">
+                     <input type="radio" id="noise" name="mode" onclick="toggle('noise')">
                      <span class="checkmark"></span>
                      Noise
                      <div class='legend-bar' style="text-align:center;margin:1px;color:black;font-size:10px;font-weight:bold" id='noise'>noisy - less noisy</div>
                   </label>
                   <label class="radio-container">
-                     <input type="checkbox" id="nature" name="mode" onclick="toggle('nature')">
+                     <input type="radio" id="nature" name="mode" onclick="toggle('nature')">
                      <span class="checkmark"></span>
                      Nature
                      <div class='legend-bar' style="text-align:center;margin:1px;color:black;font-size:10px;font-weight:bold" id='nature'>close - further away</div>
                   </label>
                   <label class="radio-container">
-                     <input type="checkbox" id="university" name="mode" onclick="toggle('university')">
+                     <input type="radio" id="university" name="mode" onclick="toggle('university')">
                      <span class="checkmark"></span>
                      University
                      <div class='legend-bar'
@@ -159,7 +159,7 @@
                      id='university'>close - further away</div>
                   </label>
                   <label class="radio-container">
-                     <input type="checkbox" id="transport" name="mode" onclick="toggle('transport')">
+                     <input type="radio" id="transport" name="mode" onclick="toggle('transport')">
                      <span class="checkmark"></span>
                      Public Transport
                      <div class='legend-bar'
@@ -167,7 +167,7 @@
                      id='transport'>close - further away</div>
                   </label>
                   <label class="radio-container">
-                        <input type="checkbox" id="culture" name="mode" onclick="toggle('culture')">
+                        <input type="radio" id="culture" name="mode" onclick="toggle('culture')">
                         <span class="checkmark"></span>
                         Culture
                         <div class='legend-bar'
@@ -175,19 +175,19 @@
                         id='culture'>high density - low density</div>
                      </label>
                   <label class="radio-container">
-                     <input type="checkbox" id="shopping" name="mode" onclick="toggle('shopping')">
+                     <input type="radio" id="shopping" name="mode" onclick="toggle('shopping')">
                      <span class="checkmark"></span>
                      Shopping
                      <div class='legend-bar' style="text-align:center;margin:1px;color:black;font-size:10px;font-weight:bold" id='shopping'>high density - low density</div>
                   </label>
                   <label class="radio-container">
-                      <input type="checkbox" id="eating" name="mode" onclick="toggle('eating')">
+                      <input type="radio" id="eating" name="mode" onclick="toggle('eating')">
                       <span class="checkmark"></span>
                       Restaurants
                       <div class='legend-bar' style="text-align:center;margin:1px;color:black;font-size:10px;font-weight:bold" id='eating'>high density - low density</div>
                    </label>
                    <label class="radio-container">
-                     <input type="checkbox" id="nightlife" name="mode" onclick="toggle('nightlife')">
+                     <input type="radio" id="nightlife" name="mode" onclick="toggle('nightlife')">
                      <span class="checkmark"></span>
                      Nightlife
                      <div class='legend-bar'
@@ -289,6 +289,12 @@
                box=document.getElementById(layerName);
                if (box.checked==true){
                   layer.scene.config.layers._test_xyz[layerName].visible=true
+                  var layerNames=document.getElementsByClassName('legend-bar')
+                  for (var i=0; i<layerNames.length; i++){
+                     if (layerNames[i].id != layerName){
+                        layer.scene.config.layers._test_xyz[layerNames[i].id].visible=false
+                     }
+                  }
                } else {
                   layer.scene.config.layers._test_xyz[layerName].visible=false
                };
