@@ -113,7 +113,7 @@ layers:
                 false
         transport:
             filter:
-                function(){return feature.onpv_dis < 1000}
+                function(){return feature.onpv_dis < 200}
             draw:
                 _polygons_inlay:
                     interactive: true

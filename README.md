@@ -2,8 +2,8 @@
 A Team MAPM Project 
 
 ## Debugging
-In case the map isn't showing, turn off your adblocker and reload
-the browser window.
+In case the map or layers aren't showing up, turn off your adblocker and reload
+the browser window!
 
 ## Introduction
 
