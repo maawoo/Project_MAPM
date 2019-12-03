@@ -156,7 +156,7 @@ layers:
                 false
         anna:
             filter:
-                function(){return feature.eating_dis > 0 && feature.culture_dis > 0 && feature.onpv_dis < 1000;}
+                function(){return feature.eating_dis > 0 && feature.cultur_dis > 0 && feature.onpv_dis < 1000;}
             draw:
                 _polygons_inlay:
                     interactive: true
