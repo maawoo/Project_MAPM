@@ -23,6 +23,7 @@ layers:
             source: _test_xyz
         draw:
             _polygons_inlay:
+                interactive: true
                 color:
                     grey
         noise:
