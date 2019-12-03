@@ -205,30 +205,34 @@
                            <h2>Usecases</h2>
                             <div>
                                 <label class="radio-container">
-                                  <input type="checkbox" id="julia" name="mode" onclick="toggle('julia')">
+                                  <input type="radio" id="julia" name="mode" onclick="toggle('julia')">
                                   <span class="checkmark"></span>
                                   Julia
+                                  <div class='legend-bar' style="text-align:center;margin:1px;color:black;font-size:10px;font-weight:bold" id='julia'>cozy - not cosy</div>
                                </label>
                             </div>
                             <div>
                                <label class="radio-container">
-                                  <input type="checkbox" id="peter" name="mode" onclick="toggle('peter')">
+                                  <input type="radio" id="peter" name="mode" onclick="toggle('peter')">
                                   <span class="checkmark"></span>
                                   Peter
+                                 <div class='legend-bar' style="text-align:center;margin:1px;color:black;font-size:10px;font-weight:bold" id='peter'>cozy - not cosy</div>
                                </label>
                             </div>
                             <div>
                                <label class="radio-container">
-                                  <input type="checkbox" id="anna" name="mode" onclick="toggle('anna')">
+                                  <input type="radio" id="anna" name="mode" onclick="toggle('anna')">
                                   <span class="checkmark"></span>
                                   Anna & Klaus
+                                 <div class='legend-bar' style="text-align:center;margin:1px;color:black;font-size:10px;font-weight:bold" id='anna'>cozy - not cosy</div>
                                </label>
                             </div>
                             <div>
                                <label class="radio-container">
-                                  <input type="checkbox" id="schillers" name="mode" onclick="toggle('schillers')">
+                                  <input type="radio" id="schillers" name="mode" onclick="toggle('schillers')">
                                   <span class="checkmark"></span>
                                   The Schiller Family
+                                 <div class='legend-bar' style="text-align:center;margin:1px;color:black;font-size:10px;font-weight:bold" id='schillers'>cozy - not cosy</div>
                                </label>
                             </div>
                            </div>
@@ -271,7 +275,7 @@
          function uncheck(){
             var checkboxes = document.getElementsByTagName('input');
             for (var i=0; i<checkboxes.length; i++)  {
-            if (checkboxes[i].type == 'checkbox')   {
+            if (checkboxes[i].type == 'radio')   {
                checkboxes[i].checked = false;
             }
             }
