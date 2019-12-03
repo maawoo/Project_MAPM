@@ -1,0 +1,163 @@
+import:
+    - https://www.nextzen.org/carto/refill-style/refill-style.zip
+    - https://s3.amazonaws.com/xyz-demo/data/demo.yaml
+    - https://www.nextzen.org/carto/refill-style/themes/label-5.zip
+sources:
+    _test_xyz:
+        url: https://xyz.api.here.com/hub/spaces/IxDDo3SD/tile/web/{z}_{x}_{y}
+        url_params:
+            access_token: ALap3YdpRtO3Ia8Ux9W7dwA
+            clip: true
+        type: GeoJSON
+
+styles:
+    _polygons_inlay:
+        base: polygons
+        blend: overlay
+        # blend_order: 1
+
+layers:
+    _test_xyz:
+        enabled: true
+        data: 
+            source: _test_xyz
+        draw:
+            _polygons_inlay:
+                color:
+                    grey
+        noise:
+            filter:
+                function(){return feature.noise_db >= 50;}
+            draw:
+                _polygons_inlay:
+                    interactive: true
+                    color: 
+                        function(){
+                            h=feature.noise_norm;
+                            return [1,0,0, -h];}
+                    blend: add
+                    order: 1
+            visible:
+                false
+        nature:
+            filter:
+                 function(){return feature.nature_dis < 1500;}
+            draw: 
+                _polygons_inlay:
+                    interactive: true
+                    color: 
+                        function(){ 
+                            h=feature.nature_norm;
+                            return [.13,.53,.13,-h];}
+                    blend: add
+                    order: 1
+            visible:
+                false
+        eating:
+            filter:
+                function(){return feature.eating_dis > 3;}
+            draw:
+                _polygons_inlay:
+                    interactive: true
+                    color: 
+                        function(){ 
+                            h=feature.eating_norm;                            
+                            return [.4,.4,1,h];}
+                    blend: add
+                    order: 1
+            visible:
+                false
+        nightlife:
+            filter:
+                function(){return feature.nightl_dis > 0;}
+            draw:
+                _polygons_inlay:
+                    interactive: true
+                    color:
+                        function(){
+                            h=feature.nightl_norm;
+                            return [0,.75,1,h];}
+                    blend: add
+                    order: 1
+            visible:
+                false
+        culture:
+            filter:
+                function(){return feature.cultur_dis > 0;}
+            draw:
+                _polygons_inlay:
+                    interactive: true
+                    color:
+                        function(){
+                            h=feature.cultur_norm;
+                            return [1,.55,0, h];}
+                    blend: add
+                    order: 1
+            visible:
+                false
+        shopping:
+            filter:
+                function(){return feature.shoppi_dis > 0;}
+            draw:
+                _polygons_inlay:
+                    interactive: true
+                    color:
+                        function(){
+                            h = feature.shoppi_norm;
+                            return [.7,.13,.13,h];
+                            }
+                    blend: add
+                    order: 1
+            visible:
+                false
+        university:
+            # filter:
+            #      function(){return feature.univer_dis < 1000;}
+            draw:
+                _polygons_inlay:
+                    interactive: true
+                    color:
+                        function(){
+                            h = feature.univer_norm;
+                            return [.5,1,0,-h];
+                            }
+                    blend: add
+                    order: 1
+            visible:
+                false
+        transport:
+            filter:
+                function(){return feature.onpv_dis < 1000}
+            draw:
+                _polygons_inlay:
+                    interactive: true
+                    color:
+                        function(){
+                            h=feature.onpv_norm;
+                            return [.55,.04,.32,-h];
+                        }
+                    blend: add
+                    order: 1
+            visible:
+                false
+        julia:
+            filter:
+                function(){return feature.nature_dis < 1500;}
+            filter:
+                function(){return feature.culture_dis < 1500;}
+            filter:
+                function(){return feature.onpv_dis < 1000;}
+            draw:
+                _polygons_inlay:
+                    interactive: true
+                    color:
+                        function(){
+                            a=feature.nature_norm;
+                            b=feature.cultur_norm;
+                            c=feature.onpv_norm;
+                            d=-((a+b+c)/3);
+                            return [0,255*d,0];}
+                    blend: add
+                    order: 1
+            visible:
+                false
