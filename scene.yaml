@@ -126,31 +126,22 @@ layers:
             visible:
                 false
         julia:
-            filter:
-                function(){return feature.nature_dis < 1500;}
-            filter:
-                function(){return feature.noise_db == null;}
-            filter:
-                function(){return feature.onpv_dis < 1000;}
+            filter: 
+                function(){return feature.noise_db == null && feature.nature_dis < 1500 && feature.onpv_dis < 1000;}
             draw:
                 _polygons_inlay:
                     interactive: true
                     color:
                         function(){
-                            a=feature.nature_norm;
-                            b=feature.noise_norm;
-                            c=feature.onpv_norm;
-                            d=((a+b+c)/3);
-                            return [.04,.35,.04,d];}
+                            a=-feature.nature_norm;
+                            b=feature.onpv_norm;
+                            c=((a+b)/2);
+                            return [.04,.35,.04,c];}
             visible:
                 false
         peter:
             filter:
-                function(){return feature.eating_dis > 0;}
-            filter:
-                function(){return feature.nightl_dis > 0;}
-            # filter:
-            #     function(){return feature.univer_dis < 1000;}
+                function(){return feature.eating_dis > 0 && feature.nightl_dis > 0 && feature.univer_dis > 0;}
             draw:
                 _polygons_inlay:
                     interactive: true
@@ -165,11 +156,7 @@ layers:
                 false
         anna:
             filter:
-                function(){return feature.eating_dis > 0;}
-            filter:
-                function(){return feature.culture_dis > 0;}
-            filter:
-                function(){return feature.onpv_dis < 1000;}
+                function(){return feature.eating_dis > 0 && feature.culture_dis > 0 && feature.onpv_dis < 1000;}
             draw:
                 _polygons_inlay:
                     interactive: true
@@ -184,7 +171,7 @@ layers:
                 false
         schillers:
             filter:
-                function(){return feature.nature_dis > 200;}
+                function(){return feature.nature_dis > 200 && feature.shoppi_dis > 0 && feature.noise_db == null;}
             filter:
                 function(){return feature.shoppi_dis > 0;}
             filter:
@@ -196,12 +183,7 @@ layers:
                         function(){
                             a=feature.nature_norm;
                             b=feature.shoppi_norm;
-                            c=feature.noise_norm;
-                            d=((-a+b+c)/3);
+                            d=((-a+b)/2);
                             return [.04,.35,.04,d];}
-            visible:
-                false
-
-
             visible:
                 false
