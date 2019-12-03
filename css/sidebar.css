@@ -11,6 +11,15 @@
    overflow-y: auto;
 }
 
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+   position: absolute;
+   top: 25px;
+   right: 25px;
+   font-size: 20px;
+   margin-left: 50px;
+ }
+
 .group {
    margin: 20px 0;
    width: 100%;
