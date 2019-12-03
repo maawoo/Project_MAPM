@@ -4,13 +4,10 @@
       <meta charset="utf-8">
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-      <title>Team MAPM!!!</title>
+      <title>Find the Right Place - Team MAPM</title>
       <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css" />
       <link rel="stylesheet" type="text/css" href="css/sidebar.css" />
       <link rel="stylesheet" type="text/css" href="css/index.css" />
-
-      <!-- A lightweight graphical user interface for changing variables in JavaScript.  -->
-      <script src="js/dat.gui.min.js"></script>
 
       <style>
          body {
@@ -113,10 +110,10 @@
     <div id="sidebar">
         <div class="gradient-line"></div>
         <div class="header">
-           <h1>Project MAPM</h1>
+           <h1>Find the Right Place</h1>
            <p>
-              <a target="_blank"
-              href="https://www.youtube.com/watch?v=X2ieFd-o4Js">How does it even work??</a>
+              A project by Team MAPM<a target="_blank"
+              href="https://www.youtube.com/watch?v=X2ieFd-o4Js">!</a>
            </p>
         </div>
         <div class="tabs">
@@ -141,14 +138,12 @@
                      <span class="checkmark"></span>
                      Noise
                      <div class='legend-bar' style="text-align:center;margin:1px;color:black;font-size:10px;font-weight:bold" id='noise'>noisy - less noisy</div>
-                     <!-- <input class='slider' id="noise" type="range" min="0" max="1" step="0.1" value="0" onchange="updateOpacity(this.value, id)"> -->
                   </label>
                   <label class="radio-container">
                      <input type="checkbox" id="nature" name="mode" onclick="toggle('nature')">
                      <span class="checkmark"></span>
                      Nature
                      <div class='legend-bar' style="text-align:center;margin:1px;color:black;font-size:10px;font-weight:bold" id='nature'>close - further away</div>
-                     <!-- <input class='slider' id="nature" type="range" min="0" max="1" step="0.1" value="0" onchange="updateOpacity(this.value, id)"> -->
                   </label>
                   <label class="radio-container">
                      <input type="checkbox" id="university" name="mode" onclick="toggle('university')">
@@ -157,7 +152,6 @@
                      <div class='legend-bar'
                      style="text-align:center;margin:1px;color:black;font-size:10px;font-weight:bold"
                      id='university'>close - further away</div>
-                     <!-- <input class='slider' id="university" type="range" min="0" max="1" step="0.1" value="0" onchange="updateOpacity(this.value, id)"> -->
                   </label>
                   <label class="radio-container">
                      <input type="checkbox" id="transport" name="mode" onclick="toggle('transport')">
@@ -166,7 +160,6 @@
                      <div class='legend-bar'
                      style="text-align:center;margin:1px;color:black;font-size:10px;font-weight:bold"
                      id='transport'>close - further away</div>
-                     <!-- <input class='slider' id="transport" type="range" min="0" max="1" step="0.1" value="0" onchange="updateOpacity(this.value, id)"> -->
                   </label>
                   <label class="radio-container">
                         <input type="checkbox" id="culture" name="mode" onclick="toggle('culture')">
@@ -175,21 +168,18 @@
                         <div class='legend-bar'
                         style="text-align:center;margin:1px;color:black;font-size:10px;font-weight:bold"
                         id='culture'>high density - low density</div>
-                        <!-- <input class='slider' id="culture" type="range" min="0" max="1" step="0.1" value="0" onchange="updateOpacity(this.value, id)"> -->
                      </label>
                   <label class="radio-container">
                      <input type="checkbox" id="shopping" name="mode" onclick="toggle('shopping')">
                      <span class="checkmark"></span>
                      Shopping
                      <div class='legend-bar' style="text-align:center;margin:1px;color:black;font-size:10px;font-weight:bold" id='shopping'>high density - low density</div>
-                     <!-- <input class='slider' id="shopping" type="range" min="0" max="1" step="0.1" value="0" onchange="updateOpacity(this.value, id)"> -->
                   </label>
                   <label class="radio-container">
                       <input type="checkbox" id="eating" name="mode" onclick="toggle('eating')">
                       <span class="checkmark"></span>
                       Restaurants
                       <div class='legend-bar' style="text-align:center;margin:1px;color:black;font-size:10px;font-weight:bold" id='eating'>high density - low density</div>
-                      <!-- <input class='slider' id="eating" type="range" min="0" max="1" step="0.1" value="0" onchange="updateOpacity(this.value, id)"> -->
                    </label>
                    <label class="radio-container">
                      <input type="checkbox" id="nightlife" name="mode" onclick="toggle('nightlife')">
@@ -198,12 +188,6 @@
                      <div class='legend-bar'
                      style="text-align:center;margin:1px;color:black;font-size:10px;font-weight:bold"
                      id='nightlife'>high density - low density</div>
-                     <!-- <input class='slider' id="nightlife" type="range" min="0" max="1" step="0.1" value="0" onchange="updateOpacity(this.value, id)"> -->
-                  </label>
-                  <label class="radio-container">
-                        <input type="checkbox" id="julia" name="mode" onclick="toggle('julia')">
-                        <span class="checkmark"></span>
-                        Julia
                   </label>
                </div>
             </div>
@@ -215,11 +199,6 @@
                         <div class="layer-tiles">
                            <h2>Usecases</h2>
                            <div>
-                              <label class="radio-container">
-                                    <input type="checkbox" id="nature" name="mode" onclick="toggle('nature')">
-                                    <span class="checkmark"></span>
-                                    Nature
-                              </label>
                               <label class="radio-container">
                                  <input type="checkbox" id="julia" name="mode" onclick="toggle('julia')">
                                  <span class="checkmark"></span>
@@ -307,7 +286,9 @@
          };
 
        
-         var map = L.map('map', {boxZoom: false});
+         var map = L.map('map', {zoomControl: true});
+         
+         map.zoomControl.setPosition('topright');
 
          window.addEventListener('load', uncheck);
          window.addEventListener('load', setLegend);

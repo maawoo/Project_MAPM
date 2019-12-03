@@ -35,8 +35,6 @@ layers:
                         function(){
                             h=feature.noise_norm;
                             return [1,0,0, -h];}
-                    blend: add
-                    order: 1
             visible:
                 false
         nature:
@@ -49,8 +47,6 @@ layers:
                         function(){ 
                             h=feature.nature_norm;
                             return [.13,.53,.13,-h];}
-                    blend: add
-                    order: 1
             visible:
                 false
         eating:
@@ -63,8 +59,6 @@ layers:
                         function(){ 
                             h=feature.eating_norm;                            
                             return [.4,.4,1,h];}
-                    blend: add
-                    order: 1
             visible:
                 false
         nightlife:
@@ -77,8 +71,6 @@ layers:
                         function(){
                             h=feature.nightl_norm;
                             return [0,.75,1,h];}
-                    blend: add
-                    order: 1
             visible:
                 false
         culture:
@@ -91,8 +83,6 @@ layers:
                         function(){
                             h=feature.cultur_norm;
                             return [1,.55,0, h];}
-                    blend: add
-                    order: 1
             visible:
                 false
         shopping:
@@ -106,8 +96,6 @@ layers:
                             h = feature.shoppi_norm;
                             return [.7,.13,.13,h];
                             }
-                    blend: add
-                    order: 1
             visible:
                 false
         university:
@@ -121,8 +109,6 @@ layers:
                             h = feature.univer_norm;
                             return [.5,1,0,-h];
                             }
-                    blend: add
-                    order: 1
             visible:
                 false
         transport:
@@ -136,8 +122,6 @@ layers:
                             h=feature.onpv_norm;
                             return [.55,.04,.32,-h];
                         }
-                    blend: add
-                    order: 1
             visible:
                 false
         julia:
@@ -157,7 +141,5 @@ layers:
                             c=feature.onpv_norm;
                             d=-((a+b+c)/3);
                             return [0,255*d,0];}
-                    blend: add
-                    order: 1
             visible:
                 false
