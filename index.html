@@ -208,32 +208,28 @@
                                   <input type="radio" id="julia" name="mode" onclick="toggle('julia')">
                                   <span class="checkmark"></span>
                                   Julia
-                                  <div class='legend-bar' style="text-align:center;margin:1px;color:black;font-size:10px;font-weight:bold" id='julia'>cozy - not cosy</div>
-                               </label>
+                                  </label>
                             </div>
                             <div>
                                <label class="radio-container">
                                   <input type="radio" id="peter" name="mode" onclick="toggle('peter')">
                                   <span class="checkmark"></span>
                                   Peter
-                                 <div class='legend-bar' style="text-align:center;margin:1px;color:black;font-size:10px;font-weight:bold" id='peter'>cozy - not cosy</div>
-                               </label>
+                                 </label>
                             </div>
                             <div>
                                <label class="radio-container">
                                   <input type="radio" id="anna" name="mode" onclick="toggle('anna')">
                                   <span class="checkmark"></span>
                                   Anna & Klaus
-                                 <div class='legend-bar' style="text-align:center;margin:1px;color:black;font-size:10px;font-weight:bold" id='anna'>cozy - not cosy</div>
-                               </label>
+                                 </label>
                             </div>
                             <div>
                                <label class="radio-container">
                                   <input type="radio" id="schillers" name="mode" onclick="toggle('schillers')">
                                   <span class="checkmark"></span>
                                   The Schiller Family
-                                 <div class='legend-bar' style="text-align:center;margin:1px;color:black;font-size:10px;font-weight:bold" id='schillers'>cozy - not cosy</div>
-                               </label>
+                                 </label>
                             </div>
                            </div>
                         </div>
@@ -293,7 +289,7 @@
                box=document.getElementById(layerName);
                if (box.checked==true){
                   layer.scene.config.layers._test_xyz[layerName].visible=true
-                  var layerNames=document.getElementsByClassName('legend-bar')
+                  var layerNames=document.getElementsByName('mode')
                   for (var i=0; i<layerNames.length; i++){
                      if (layerNames[i].id != layerName){
                         layer.scene.config.layers._test_xyz[layerNames[i].id].visible=false
