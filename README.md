@@ -1,5 +1,8 @@
 # "Find the Right Place"
-A Team MAPM Project 
+A project by Team MAPM for the ["Map your world!"](https://www.agorize.com/en/challenges/heremapathon) mapathon by HERE Maps.
+
+Click here to view our map:
+https://maawoo.github.io/Project_MAPM/
 
 ## Debugging
 In case the map or layers aren't showing up, turn off your adblocker and reload
