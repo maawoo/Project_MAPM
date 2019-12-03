@@ -109,6 +109,7 @@
   <body>
     <div id="sidebar">
         <div class="gradient-line"></div>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#9776;</a>
         <div class="header">
            <h1>Find the Right Place</h1>
            <p>
@@ -256,6 +257,16 @@
          const height = $('#content-group-1').clientHeight || $('#content-group-1').offsetHeight;
          $('.content').style.height = (height) + 'px';
          
+        /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+         function closeNav() {
+            h=document.getElementById("sidebar").style.height;
+            if (h==='20px'){
+               document.getElementById("sidebar").style.height = "325px";
+            } else {
+            document.getElementById("sidebar").style.height = "20px";
+            }
+         } 
+      
          //uncheck all checkboxes by default
          function uncheck(){
             var checkboxes = document.getElementsByTagName('input');
