@@ -332,13 +332,23 @@
         // Pop-ups
         var popup = L.popup({closeButton: false});
         function showPopup(latlng, noise, nature, university, transport, culture, shopping, restaurants, nightlife) { 
+               if(transport===null){
+              transport= '> 200'
+           } else{
+              transport=round(transport, 0)
+           }
+           if(noise===null){
+              noise='no data available'
+           }else{
+              noise=noise + ' dB'
+           }
                popup
                 .setLatLng(latlng)
                 .setContent(
-                   'Noise level:' + ' ' + noise + ' dB' +
+                   'Noise level: ' + noise +
                    '<br/>Distance to nature:' + ' ' + round(nature, 0) + ' m' +
                    '<br/>Distance to university:' + ' ' + round(university, 0) + ' m' +
-                   '<br/>Distance to public transport:' + ' ' + round(transport, 0) + ' m' +
+                   '<br/>Distance to public transport:' + ' ' + transport + ' m' +
                    '<br/>Culture venues nearby:' + ' ' + culture +
                    '<br/>Shops nearby:' + ' ' + shopping +
                    '<br/>Restaurants nearby:' + ' ' + restaurants +
