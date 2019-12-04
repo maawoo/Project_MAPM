@@ -127,14 +127,14 @@ layers:
                 false
         julia:
             filter: 
-                function(){return feature.noise_db == null && feature.nature_dis < 1500 && feature.onpv_dis < 1000;}
+                function(){return feature.noise_db == null && feature.nature_dis < 1500 && feature.onpv_dis < 200;}
             draw:
                 _polygons_inlay:
                     interactive: true
                     color:
                         function(){
-                            a=-feature.nature_norm;
-                            b=feature.onpv_norm;
+                            a=feature.nature_norm;
+                            b=-feature.onpv_norm;
                             c=((a+b)/2);
                             return [.04,.35,.04,c];}
             visible:
