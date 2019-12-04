@@ -69,8 +69,8 @@ Parameters used:
 
 ## Pop Up
 
-By clicking on an object in the map, a Pop Up will show up which contains
-information about the exact distances and densities for this object.
+By clicking on an building in the map, a Pop Up will show up which contains
+information about the exact distances and densities for this building.
 
 ## Data
 
@@ -82,4 +82,4 @@ nature) and on the other hand we counted features (e.g. restaurants) in a certai
 perimeter surrounding the polygon. 
 
 We also included publicly available noise data from the [Thuringia state government](https://www.geoportal-th.de/de-de/Metadaten/Metadatenansicht/uid/80b250a6-4dda-481d-8568-162e20c1cb7a/sid/0) and the [German Railway](https://www.eba.bund.de/DE/Themen/Laerm_an_Schienenwegen/Laermkartierung/laermkartierung_node.html#doc1528304bodyText2).
-The noise dataset was calculated after EU regulations in a height of 4 m above ground.
+The noise dataset was calculated after EU regulations at a height of 4 m above ground.
