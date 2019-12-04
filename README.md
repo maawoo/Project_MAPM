@@ -11,12 +11,12 @@ Turn off your adblocker and reload the browser window, if any of the layers are 
 
 Imagine you move to a new city and you have no idea about the different districts
 and what they have to offer in terms of culture, nightlife, accessibility to public 
-transport, and so on. With this map we want to give people the tool to ***Find the 
-Right Place*** for their new home. At least if they want to move to Jena, Germany :wink:  
+transport and so on. With this map we want to give people the tool to ***Find the 
+Right Place*** for their new home! (...at least if they want to move to Jena, Germany :wink:)
 
 Several public datasets containing factors for the attractiveness of 
 urban spaces were combined to generate one simple to use map indicating
-the neighborhood of the highest comfort for each individual.
+the neighborhood of highest comfort for each individual.
 
 In the **Layers** tab, single layers can be viewed. The features of each layer 
 are selected using reasonable filters in order to portray only those features affected by 
@@ -25,36 +25,48 @@ stronger this feature is influenced by the specified parameter. Either negativel
 (e.g. in case of noise pollution) or positively (e.g. in case of 
 distance to nature). 
 
-In the **Usecases** tab, different use cases have been pre-calculated. They 
-all are named for a better designation and contain different parameters.
+In the **Usecases** tab, different scenarios have been pre-calculated based on different parameters. 
+In a later update, we want to give the user more freedom to explore the data and visualize 
+his/her own preferences on the map. 
 
 ## Usecases
 
-**Julia** is a young university student with a dog. She needs to be close to 
-nature for her dog to feel comfortable. Since she regularly travels, she 
-would also like to be close to public transport without having to suffer 
-from any noise pollution. Therefore the parameters used are nature and 
-public transport as positive and noise pollution as a negative factor.
+**Julia** is a young university student, who is going to move to Jena with her dog. 
+She loves nature and additionally her dog needs to be close to green spaces to feel comfortable. 
+Since Julia regularly travels, she would also like to be close to public transport without 
+having to suffer from any noise pollution. 
+Parameters used: 
+- distance to nature (+) 
+- distance to public transport (+)
+- noise pollution (-)
 
-**Peter** loves to party and enjoy nights out with friends. He studies at
+**Peter** loves to party and enjoys going out with friends. He studies at
 the local university but strongly dislikes getting up early. Noise 
-doesn't bother him too much though. The parameters used in the Peter
-usecase are density or restaurants and nightlife as well as a close
-distance to university. 
+doesn't bother him too much though. 
+Parameters used: 
+- density of restaurants (+) 
+- density of nightlife (+)
+- distance to university (+)
 
 **Anna and Klaus** are a middle-aged couple and both work full-time. They 
 like arts and theater and often spend the evening with a good meal in
 a restaurant and a stage play or concert afterwards. But because 
 Anna works for an international company, she needs to be close to 
-public transport as well. For Anna and Klaus, the culture and 
-restaurants parameter as well as the public transport were combined.
+public transport as well. 
+Parameters used: 
+- density of culture (+) 
+- density of restaurants (+)
+- distance to public transport (+)
 
 **The Schiller family** consists of Mum and Dad with their two teenage 
-daughters. The daughters love shopping in their free time but mum 
-and dad rather enjoy some peaceful quietness. Also, the mum has a 
-strong pollen allergy and wants to live far from any trees. This 
-layer is a combination of shopping as positive and nosie as well 
-as nature as negative factors.
+daughters. The daughters love shopping in their free time but their parents 
+rather enjoy some peaceful quietness. Also, the mum has a 
+strong pollen allergy and wants to live far from any trees. 
+Parameters used: 
+- density of shops (+)
+- noise pollution (-)
+- distance to nature (-)
+
 
 ## Data
 
