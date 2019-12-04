@@ -156,7 +156,7 @@ layers:
                 false
         anna:
             filter:
-                function(){return feature.eating_dis > 0 && feature.cultur_dis > 0 && feature.onpv_dis < 1000;}
+                function(){return feature.eating_dis > 0 && feature.cultur_dis > 0 && feature.onpv_dis < 200;}
             draw:
                 _polygons_inlay:
                     interactive: true
@@ -171,11 +171,7 @@ layers:
                 false
         schillers:
             filter:
-                function(){return feature.nature_dis > 200 && feature.shoppi_dis > 0 && feature.noise_db == null;}
-            filter:
-                function(){return feature.shoppi_dis > 0;}
-            filter:
-                function(){return feature.noise_db == null;}
+                function(){return feature.nature_dis > 50 && feature.shoppi_dis > 0 && feature.noise_db == null;}
             draw:
                 _polygons_inlay:
                     interactive: true
@@ -183,7 +179,7 @@ layers:
                         function(){
                             a=feature.nature_norm;
                             b=feature.shoppi_norm;
-                            d=((-a+b)/2);
+                            d=((a+b)/2);
                             return [.04,.35,.04,d];}
             visible:
                 false
