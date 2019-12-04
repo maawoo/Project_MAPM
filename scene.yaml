@@ -108,6 +108,7 @@ layers:
                     color:
                         function(){
                             h = feature.univer_norm;
+                            h = (h - Math.min(h)) / (Math.max(h) - Math.min(h))
                             return [.5,1,0,-h];
                             }
             visible:
