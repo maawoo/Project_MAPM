@@ -25,11 +25,11 @@ stronger this feature is influenced by the specified parameter. Either negativel
 (e.g. in case of noise pollution) or positively (e.g. in case of 
 proximity to nature). 
 
-In the **Use cases** tab, different scenarios have been pre-calculated based on different parameters. 
+In the **Use Cases** tab, different scenarios have been pre-calculated based on different parameters. 
 In a later update, we want to give the user more freedom to explore the data and visualize 
 his/her own preferences on the map. 
 
-## Use cases
+## Use Cases
 
 **Julia** is a young university student, who is going to move to Jena with her dog. 
 She loves nature and additionally her dog needs to be close to green spaces to feel comfortable. 
@@ -45,7 +45,7 @@ the local university but strongly dislikes getting up early. Noise
 doesn't bother him too much though. 
 Parameters used: 
 - density of Restaurants (+) 
-- density of nightlife (+)
+- density of Nightlife (+)
 - distance to University (+)
 
 **Anna and Klaus** are a middle-aged couple and both work full-time. They 
@@ -69,7 +69,7 @@ Parameters used:
 
 ## Pop Up
 
-By clicking on an object in the map, a pop up will show up which contains
+By clicking on an object in the map, a Pop Up will show up which contains
 information about the exact distances and densities for this object.
 
 ## Data
