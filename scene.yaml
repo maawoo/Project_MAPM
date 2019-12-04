@@ -107,9 +107,8 @@ layers:
                     interactive: true
                     color:
                         function(){
-                            h = feature.univer_norm;
-                            h = (h - Math.min(h)) / (Math.max(h) - Math.min(h))
-                            return [.5,1,0,-h];
+                            h = 2 * feature.univer_norm;
+                            return [.5, 1, 0, -h];
                             }
             visible:
                 false
