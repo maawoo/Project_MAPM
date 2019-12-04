@@ -100,9 +100,9 @@ layers:
             visible:
                 false
         university:
-             filter:
+            filter:
                   function(){return feature.univer_dis < 3000;}
-             draw:
+            draw:
                 _polygons_inlay:
                     interactive: true
                     color:
