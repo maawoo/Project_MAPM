@@ -69,7 +69,7 @@ Parameters used:
 
 ## Pop Up
 
-By clicking on an building in the map, a Pop Up will show up which contains
+By clicking on a building in the map, a Pop Up will show up which contains
 information about the exact distances and densities for this building.
 
 ## Data
