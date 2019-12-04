@@ -25,7 +25,7 @@ stronger this feature is influenced by the specified parameter. Either negativel
 (e.g. in case of noise pollution) or positively (e.g. in case of 
 proximity to nature). 
 
-In the **Use Cases** tab, different scenarios have been pre-calculated based on different parameters. 
+In the **Use Cases** tab, different scenarios have been precalculated based on different parameters. 
 In a later update, we want to give the user more freedom to explore the data and visualize 
 his/her own preferences on the map. 
 
@@ -67,10 +67,10 @@ Parameters used:
 - Noise Pollution (-)
 - distance to Nature (-)
 
-## Pop Up
+## Pop-Ups
 
-By clicking on a building in the map, a Pop Up will show up which contains
-information about the exact distances and densities for this building.
+By clicking on a building in the map, a Pop-Up will show up which contains exact 
+information about all attributes for the selected building.
 
 ## Data
 
