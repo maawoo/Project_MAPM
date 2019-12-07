@@ -1,0 +1,35 @@
+sources:
+    _test_xyz:
+        url: https://xyz.api.here.com/hub/spaces/g7ha5XFW/tile/web/{z}_{x}_{y}
+        url_params:
+            access_token: AB4xTPyUTJaO-CHpPjOoMAA
+            clip: true
+        type: GeoJSON
+
+styles:
+    _polygons_inlay:
+        base: polygons
+        blend: overlay
+        # blend_order: 1
+
+layers:
+    _test_xyz:
+        enabled: true
+        data:
+            source: _test_xyz
+        draw:
+            _polygons_inlay:
+                interactive: true
+                color:
+                    function(){
+                        a=feature.noise_norm;
+                        b=feature.nature_norm;
+                        c=feature.univer_norm;
+                        d=feature.onpv_norm;
+                        e=feature.cultur_norm;
+                        f=feature.shoppi_norm;
+                        g=feature.eating_norm;
+                        h=feature.nightl_norm;
+
+                        value = _REPLACE_ME_
+                        return [.5,.5,.0,value];}
